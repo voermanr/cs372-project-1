@@ -20,4 +20,5 @@ socks.sendall(request.encode('ISO-8859-1'))
 response = socks.recv(4096).decode()
 while len(response) > 0:
     response = socks.recv(4096).decode()
+
 socks.close()

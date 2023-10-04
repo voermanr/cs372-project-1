@@ -15,6 +15,7 @@ socks.listen()
 while True:
     incoming = socks.accept()
     connected_sock = incoming[0]
+    print(str(incoming[1][0]) + ":" + str(incoming[1][1]) + " connected...")
 
     request = connected_sock.recv(4096).decode()
     while not re.search('\\r\\n', request):
